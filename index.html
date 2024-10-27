@@ -146,7 +146,7 @@
         .product-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 25px;
+            gap: 5px;
             max-width: 1200px;
             width: 100%;
         }
@@ -157,6 +157,9 @@
             border-radius: 10px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            min-width: 190px;
+            max-width: 200px;
+            min-height: min-content;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
