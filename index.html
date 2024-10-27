@@ -153,14 +153,16 @@
 
         /* Product card styling */
         .product-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-height: min-content;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: 400px; /* Set a consistent height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+}
 
         .product-card:hover {
             transform: translateY(-8px);
@@ -297,14 +299,17 @@
         }
         
         @media (max-width: 768px) {
-    .product-container {
+            .product-container {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 50px; /* 3 items per row */
+        margin-top: 50px; /* Display two items per row on mobile */
     }
 
     .product-card {
-        margin: 5px;
-        /* Adjust product card styling if needed */
+        max-height: 380px; /* Adjust height slightly for mobile */
+    }
+
+    .product-image {
+        height: 180px; /* Adjust image height for smaller screens */
     }
     .footer{
       align-items: baseline;
